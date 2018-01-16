@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loans</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/loans.css">
+
+    <style>
+        .highlight{
+	        background-color: yellow;
+	        padding: 5px;
+            margin: 10px;
+            }
+        .picspace{
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<table align="center" style = "width:85%">
+	<tr>
+		<td class="mid">Loans</td>
+		<td class="mid">Amount Due</td>
+        <td class="mid">Total Amount Payable</td>
+        <td class="mid">Total Interest Payable</td>
+        <td class="mid">Percentage Paid</td>
+        <td><br></td>
+	</tr>
+	<tr>
+		<td class="mid"><u><b> POSB Futher Study Assist </b></u><br>
+		Loan Amount : S$10,000<br>
+		Interest Rate : 5.88%<br>
+        Loan Tenor: 5 Years<br>
+        Due on: 1st Nov
+		</td>
+        <td><p class="highlight">S$215.67</p></td>
+        <td>S$12,940</td>
+        <td>S$2940</td>
+        <td><img class="picspace" src="../static/images/pie1.JPG" width="200" height="150"></td>
+        <td><button type="button" onclick="alert('You will be brought to the payment page')">PAY NOW</button></td>
+	</tr>
+	<tr>
+		<td class="mid"><u><b>OCBC Cash-On-Installment</b></u><br>
+		Loan Amount : S$15,000<br>
+		Interest Rate : 5.8%<br>
+		Loan Tenor: 3 Years<br>
+        Due on: 14th Nov
+		</td>
+        <td><p class="highlight">S$250</p></td>
+        <td>S$17,610</td>
+        <td>S$489.17</td>
+        <td><img class="picspace" src="../static/images/pie2.JPG" width="200" height="150"></td>
+		<td><button type="button" onclick="alert('You will be brought to the payment page')">PAY NOW</button></td>
+	</tr>
+    <tr>
+		<td class="mid"><u><b>DBS Car Loan</b></u><br>
+		Loan Amount : S$50,000<br>
+		Interest Rate : 2.78%<br>
+		Loan Tenor: 4 Years<br>
+        Due on: 22th Nov
+		</td>
+        <td><p class="highlight">S$694.50</p></td>
+        <td>S$33,336</td>
+        <td>S$3,336</td>
+        <td><img class="picspace" src="../static/images/pie3.JPG" width="200" height="150"></td>
+		<td><button style="cursor: not-allowed; opacity: 0.6;" class="disabled" disabled type="button">PAY NOW</button></td>
+	</tr>
+</table>
+
+<p style="position: absolute; left:355px; font-size: 35px">Total Amount Due : <u><b>S$1,160.17</b></u></p>
+
+        <p>the total paid is ${{ totalPaidAmount }}</p>
+        <p>the total unpaid is ${{ totalUnpaidAmount }}</p>
+        <p>the total overdue is ${{ totalOverdueAmount }}</p>
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>This is details Page</h1>
+    </div>
+    <div>
+
+        {% if count == 0 %}
+            <p>You have no users</p>
+        {% else %}
+            <p>You have <span>{{ count }}</span> users for your system</p>
+        {% endif %}
+    </div>
+    <div>
+    <table style="width:100%">
+
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.get_firstname() }}</td>
+            <td>{{ user.get_lastname() }}</td>
+            <td>{{ user.get_age() }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+{% endblock %}

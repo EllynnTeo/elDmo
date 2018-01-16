@@ -1,0 +1,9 @@
+John,Oct,withdraw,50
+Alan,Oct,deposit,250
+John,Nov,withdraw,23.80
+John,Nov,deposit,100
+John,Dec,paid,200
+Alan,Dec,unpaid,80
+John,Dec,paid,30
+John,Dec,unpaid,20
+John,Dec,overdue,546
